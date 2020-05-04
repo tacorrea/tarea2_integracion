@@ -1,18 +1,18 @@
 'use strict';
-
+require('dotenv').config()
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 
-var config;
+let config;
 if (env==="development") {
   config = require(__dirname + '/../config/config.json')[env]
 }
-const db = {};
+const db = pgp(process.env.DATABASE_URL || "postgres://localhost:6000/tarea_final");
 
-var sequelize;
+let sequelize;
 
 if (env==="production") {
   sequelize = new Sequelize(process.env["DATABASE_URL"], {});
@@ -35,11 +35,6 @@ Object.keys(db).forEach(modelName => {
     db[modelName].associate(db);
   }
 });
-
-db.sequelize = sequelize;
-db.Sequelize = Sequelize;
-
-module.exports = db;
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
