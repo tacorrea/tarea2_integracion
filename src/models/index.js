@@ -15,7 +15,10 @@ const db = {};
 let sequelize;
 
 if (env==="production") {
-  sequelize = new Sequelize(process.env["DATABASE_URL"], {});
+  sequelize = new Sequelize(process.env["DATABASE_URL"], {
+    dialect: 'postgres',
+    protocol: 'postgres'
+  });
 } else {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
