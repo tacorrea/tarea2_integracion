@@ -17,7 +17,7 @@ export async function getIngrediente(req, res){
 export async function createIngrediente(req, res){
     const {id, nombre, descripcion} = req.body;
     try{
-        let newIngrediente = await Ingrediente.create({
+        var newIngrediente = await Ingrediente.create({
             id,
             nombre,
             descripcion

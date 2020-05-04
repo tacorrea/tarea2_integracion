@@ -16,7 +16,7 @@ export async function getHamburguesa(req, res){
 export async function createHamburguesa(req, res){
     const {id, nombre, precio, descripcion, imagen} = req.body;
     try{
-        let newHamburguesa = await Hamburguesa.create({
+        var newHamburguesa = await Hamburguesa.create({
             id,
             nombre,
             precio,
