@@ -5,7 +5,7 @@ export const sequelize = new Sequelize(
     "tjxllgbcoivvop",
     "930444437d5ea9248ab298e6b6ec412f848af9bc96df2473429cb86546e49f4c",
     {
-        host: '@ec2-34-234-228-127.compute-1.amazonaws.com:5432',
+        host: 'ec2-34-234-228-127.compute-1.amazonaws.com:5432',
         dialect: 'postgres',
         port:5432,
         pool:{
