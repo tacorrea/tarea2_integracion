@@ -1,4 +1,4 @@
-const Hamburguesa = require('../models').Hamburguesa;
+const Hamburguesa = require('../models').default.Hamburguesa;
 
 export async function getHamburguesa(req, res){
     try{
