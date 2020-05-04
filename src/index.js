@@ -1,10 +1,9 @@
 import app from './';
 import '@babel/polyfill';
-import regeneratorRuntime from "regenerator-runtime";
-
 
 async function main(){
-    await app.listen(5432);
+    const PORT = process.env.PORT || 3000;
+    await app.listen(PORT);
     console.log("server");
 };
 
