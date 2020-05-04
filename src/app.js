@@ -7,7 +7,6 @@ import taskRoutes from './routes/ingrediente';
 //intialization
 const app = express();
 
-
 //middlewares
 app.use(morgan('dev'));
 app.use(json());

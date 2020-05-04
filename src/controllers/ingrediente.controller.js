@@ -1,4 +1,4 @@
-const Ingrediente = require('../models').Ingrediente;
+const Ingrediente = require('../models').default.Ingrediente;
 //import Ingrediente from '../models/Ingrediente'
 
 export async function getIngrediente(req, res){
